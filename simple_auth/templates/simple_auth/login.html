@@ -1,0 +1,12 @@
+{% extends 'simple_auth/base.html' %}
+
+{% block content %}
+
+{{error}}
+
+<form method="POST">
+	{{form.as_p}}
+	{% csrf_token %}
+	<button type="submit" class="btn btn-info">login</button>
+</form>
+{% endblock %}
